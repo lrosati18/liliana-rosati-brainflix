@@ -1,0 +1,60 @@
+@use "../../styles/partials/variables" as *;
+
+.header {
+  &__logo {
+    max-width: 7.5rem;
+    max-height: 1.5625rem;
+    padding: 1rem;
+  }
+  &__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    margin: 0;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.search {
+  position: relative;
+  &__icon {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+  &__input {
+    border: 1px solid $secondary-3;
+    background-color: $secondary-4;
+    padding: 0.5rem;
+    min-width: 14rem;
+    border-radius: 0.25rem;
+
+    &::placeholder {
+      position: absolute;
+      left: 15%;
+    }
+  }
+}
+
+.button {
+  position: relative;
+  width: 95%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  background-color: $primary-2;
+  border-radius: 0.25rem;
+  border-style: none;
+  text-transform: uppercase;
+  color: $primary-4;
+  font-weight: 600;
+  &__icon {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+}
