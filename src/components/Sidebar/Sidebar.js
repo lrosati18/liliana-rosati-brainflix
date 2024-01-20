@@ -1,3 +1,4 @@
+import "./Sidebar.scss";
 import SidebarElement from "./SidebarElement";
 
 function Sidebar(props) {
