@@ -2,6 +2,10 @@
 @use "../../styles/partials/mixins" as *;
 
 .sidebar {
+  @include desktop {
+    border-left: 1px solid $secondary-3;
+  }
+
   &__title {
     border-top: 1px solid $secondary-3;
     text-align: left;
@@ -14,6 +18,11 @@
 
     @include tablet {
       margin: 1rem 1.5rem;
+    }
+
+    @include desktop {
+      border-top: none;
+      width: 10%;
     }
   }
 }
