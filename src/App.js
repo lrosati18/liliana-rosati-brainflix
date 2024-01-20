@@ -4,10 +4,11 @@ import videosData from "./data/videos.json";
 import videoDetails from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
+import Comments from "./components/Comments/Comments";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
-  const [videos, setVidoes] = useState(videosData);
+  const [videos] = useState(videosData);
   const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
 
   const handleSelectVideo = (clicked) => {
@@ -25,6 +26,7 @@ function App() {
       <main>
         <Main selectedVideo={selectedVideo} />
       </main>
+      <Comments selectedVideo={selectedVideo} />
       <Sidebar videos={filteredVideos} selectVideo={handleSelectVideo} />
     </div>
   );
