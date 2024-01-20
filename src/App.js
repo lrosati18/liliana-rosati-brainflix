@@ -3,22 +3,28 @@ import "./App.scss";
 import videosData from "./data/videos.json";
 import videoDetails from "./data/video-details.json";
 import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   const [videos, setVidoes] = useState(videosData);
-  const [selectVideo, setSelectedVideo] = useState(videoDetails[0]);
+  const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
 
   const handleSelectVideo = (clicked) => {
     const foundVideo = videoDetails.find((video) => clicked === video.id);
     setSelectedVideo(foundVideo);
   };
 
-  const filteredVideos = videos.filter((video) => video.id !== selectVideo.id);
+  const filteredVideos = videos.filter(
+    (video) => video.id !== selectedVideo.id
+  );
 
   return (
     <div className="App">
       <Header />
+      <main>
+        <Main selectedVideo={selectedVideo} />
+      </main>
       <Sidebar videos={filteredVideos} selectVideo={handleSelectVideo} />
     </div>
   );
