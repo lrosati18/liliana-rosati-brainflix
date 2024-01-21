@@ -2,19 +2,11 @@
 @use "../../styles/partials/mixins" as *;
 
 .video {
-  @include desktop {
-    width: 50%;
-  }
-
   &__button {
     background-color: $primary-4;
     border-style: none;
     font-family: "Avenir", "sans-serif";
     display: flex;
-
-    @include desktop {
-      width: 100%;
-    }
   }
 
   &__image {
@@ -27,6 +19,10 @@
     @include tablet {
       width: 20%;
       margin: 0.5rem 1rem;
+    }
+
+    @include desktop {
+      width: 25%;
     }
   }
 
@@ -48,6 +44,10 @@
 
     @include tablet {
       font-size: 1rem;
+    }
+
+    @include desktop {
+      width: 12rem;
     }
   }
 

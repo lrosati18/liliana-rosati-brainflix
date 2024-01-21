@@ -2,6 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
+  flex: 1;
+
   @include tablet {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +60,7 @@
 
 .search {
   position: relative;
+  width: 65%;
 
   @include tablet {
     display: flex;
@@ -86,13 +89,14 @@
     &::placeholder {
       position: absolute;
       left: 15%;
+      color: $primary-1;
     }
   }
 }
 
 .button {
   position: relative;
-  width: 95%;
+  width: 90%;
   height: 2.5rem;
   padding: 0.5rem;
   margin: 1rem auto;

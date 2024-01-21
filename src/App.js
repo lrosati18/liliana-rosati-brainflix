@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Comments from "./components/Comments/Comments";
 import Sidebar from "./components/Sidebar/Sidebar";
+import MainVideo from "./components/Main/MainVideo";
 
 function App() {
   const [videos] = useState(videosData);
@@ -23,10 +24,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main>
+      <MainVideo selectedVideo={selectedVideo} />
+      <div className="App__desktop">
         <Main selectedVideo={selectedVideo} />
-      </main>
-      <Comments selectedVideo={selectedVideo} />
+        <Comments selectedVideo={selectedVideo} />
+      </div>
       <Sidebar videos={filteredVideos} selectVideo={handleSelectVideo} />
     </div>
   );
