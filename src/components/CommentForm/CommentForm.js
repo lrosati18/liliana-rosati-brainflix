@@ -26,7 +26,8 @@ function CommentForm({ selectedVideo }) {
             ></textarea>
           </div>
           <button type="submit" id="submit" className="form__button">
-            <img className="form__icon" src={formIcon}></img>Comment
+            <img className="form__icon" src={formIcon} alt="submit icon"></img>
+            Comment
           </button>
         </div>
       </form>

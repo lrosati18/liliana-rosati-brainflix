@@ -20,6 +20,10 @@
       width: 20%;
       margin: 0.5rem 1rem;
     }
+
+    @include desktop {
+      width: 25%;
+    }
   }
 
   &__container {
@@ -40,6 +44,10 @@
 
     @include tablet {
       font-size: 1rem;
+    }
+
+    @include desktop {
+      width: 12rem;
     }
   }
 

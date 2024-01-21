@@ -16,21 +16,14 @@ function Main({ selectedVideo }) {
   }
 
   return (
-    <section className="main">
-      <div className="main__container">
-        <video
-          className="main__image"
-          controls
-          poster={selectedVideo.image}
-        ></video>
-      </div>
-      <h1 className="main__title">{selectedVideo.title}</h1>
-      <div className="main__info">
-        <div className="main__wrapper">
-          <p className="main__channel">By {selectedVideo.channel}</p>
-          <p className="main__date">{toDate(selectedVideo.timestamp)}</p>
+    <section className="details">
+      <h1 className="details__title">{selectedVideo.title}</h1>
+      <div className="details__info">
+        <div className="details__wrapper">
+          <p className="details__channel">By {selectedVideo.channel}</p>
+          <p className="details__date">{toDate(selectedVideo.timestamp)}</p>
         </div>
-        <div className="main__wrapper">
+        <div className="details__wrapper">
           <div className="views">
             <img className="views__icon" src={viewsIcon} alt="views icon"></img>
             <p className="views__text">{selectedVideo.views}</p>
@@ -41,7 +34,7 @@ function Main({ selectedVideo }) {
           </div>
         </div>
       </div>
-      <p className="main__description">{selectedVideo.description}</p>
+      <p className="details__description">{selectedVideo.description}</p>
     </section>
   );
 }
