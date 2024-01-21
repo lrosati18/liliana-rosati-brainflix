@@ -1,0 +1,63 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video {
+  &__button {
+    background-color: $primary-4;
+    border-style: none;
+    font-family: "Avenir", "sans-serif";
+    display: flex;
+  }
+
+  &__image {
+    border-radius: 4px;
+    background-color: $secondary-3;
+    width: 40%;
+    aspect-ratio: 1.6;
+    margin: 0.5rem;
+
+    @include tablet {
+      width: 20%;
+      margin: 0.5rem 1rem;
+    }
+
+    @include desktop {
+      width: 25%;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+
+    @include tablet {
+      max-width: 25%;
+    }
+  }
+
+  &__title {
+    margin: 1rem 0 0;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+
+    @include desktop {
+      width: 12rem;
+    }
+  }
+
+  &__channel {
+    margin: 0.5rem 0 0;
+    text-align: left;
+    font-size: 0.875rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
