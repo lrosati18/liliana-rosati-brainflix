@@ -2,6 +2,12 @@ import "./Main.scss";
 import viewsIcon from "../../assets/images/icons/views.svg";
 import likesIcon from "../../assets/images/icons/likes.svg";
 
+import axios from "axios";
+import { useState } from "react";
+
+const BASE_URL = "https://project-2-api.herokuapp.com/";
+const API_KEY = "?api_key=99e4aed7-f8e8-4932-8bf2-2901fa146633";
+
 function Main({ selectedVideo }) {
   function toDate(timestamp) {
     const date = new Date(timestamp);
