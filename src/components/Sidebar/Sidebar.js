@@ -1,5 +1,5 @@
 import "./Sidebar.scss";
-import SidebarElement from "./SidebarElement";
+import SidebarElement from "../SidebarElement/SidebarElement";
 
 function Sidebar(props) {
   const { videos, selectVideo } = props;
