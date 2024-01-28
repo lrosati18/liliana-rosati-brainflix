@@ -30,6 +30,7 @@
     font-weight: 600;
     margin: 1rem;
     color: $primary-1;
+    font-size: 1.625rem;
 
     @include tablet {
       font-size: 2.0625rem;
@@ -58,8 +59,8 @@
 
     @include desktop {
       margin-left: 8rem;
-      width: 100%;
-      gap: 7rem;
+      width: 89%;
+      gap: 15rem;
     }
   }
 
@@ -78,6 +79,7 @@
     text-align: left;
     margin-top: 1.5rem;
     color: $primary-1;
+    font-size: 1rem;
 
     @include tablet {
       margin: 0;
@@ -89,6 +91,7 @@
   &__date {
     text-align: left;
     color: $primary-3;
+    font-size: 1rem;
 
     @include tablet {
       margin: 0;
@@ -101,6 +104,7 @@
     margin: 1rem;
     color: $primary-1;
     line-height: 1.375rem;
+    font-size: 0.9375rem;
 
     @include tablet {
       margin: 1rem 2.5rem;
@@ -137,6 +141,7 @@
     text-align: left;
     margin: 1.5rem 0 0;
     color: $primary-3;
+    font-size: 1rem;
 
     @include tablet {
       margin: 0;
@@ -168,6 +173,7 @@
     text-align: left;
     margin: 1rem 0 1.5rem;
     color: $primary-3;
+    font-size: 1rem;
 
     @include tablet {
       margin: 0;

@@ -3,16 +3,6 @@
 
 .App {
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-
-  &__desktop {
-    @include desktop {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-  }
 }
 
 body {

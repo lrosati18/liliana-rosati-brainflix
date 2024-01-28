@@ -3,6 +3,8 @@ import Main from "../../components/Main/Main";
 import Comments from "../../components/Comments/Comments";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
+import "./Player.scss";
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
@@ -51,8 +53,10 @@ function PlayerPage() {
   return (
     <section className="player">
       <MainVideo selectedVideo={selectedVideo} />
-      <Main selectedVideo={selectedVideo} />
-      <Comments selectedVideo={selectedVideo} />
+      <div className="player__desktop">
+        <Main selectedVideo={selectedVideo} />
+        <Comments selectedVideo={selectedVideo} />
+      </div>
       <Sidebar videos={filteredVideos} selectVideo={fetchVideoDetails} />
     </section>
   );
