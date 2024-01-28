@@ -8,25 +8,25 @@ function CommentForm({ selectedVideo }) {
       <p className="comments__number">
         {selectedVideo.comments.length} Comments
       </p>
-      <form className="form" action="submit">
-        <img className="form__image" src={formImage} alt="Mohan Muruge"></img>
-        <div className="form__container">
-          <div className="form__wrapper">
-            <label htmlFor="comment" className="form__label">
+      <form className="post" action="submit">
+        <img className="post__image" src={formImage} alt="Mohan Muruge"></img>
+        <div className="post__container">
+          <div className="post__wrapper">
+            <label htmlFor="comment" className="post__label">
               Join the Conversation
             </label>
             <textarea
               type="text"
               name="comment"
               id="comment"
-              className="form__input"
+              className="post__input"
               placeholder="Add a new comment"
               cols="28"
               rows="5"
             ></textarea>
           </div>
-          <button type="submit" id="submit" className="form__button">
-            <img className="form__icon" src={formIcon} alt="submit icon"></img>
+          <button type="submit" id="submit" className="post__button">
+            <img className="post__icon" src={formIcon} alt="submit icon"></img>
             Comment
           </button>
         </div>

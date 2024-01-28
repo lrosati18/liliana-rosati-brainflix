@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./Header.scss";
 
 import logo from "../../assets/images/logo/BrainFlix-logo.svg";
@@ -8,7 +10,9 @@ import uploadIcon from "../../assets/images/icons/upload.svg";
 function Header() {
   return (
     <section className="header">
-      <img className="header__logo" alt="Brainflix logo" src={logo}></img>
+      <Link className="header__link" to="/">
+        <img className="header__logo" alt="Brainflix logo" src={logo}></img>
+      </Link>
       <img
         className="header__logo header__logo--tablet"
         alt="Brainflix logo"

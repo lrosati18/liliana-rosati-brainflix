@@ -33,4 +33,9 @@
       padding-top: 1rem;
     }
   }
+
+  &__link {
+    text-decoration: none;
+    color: $primary-1;
+  }
 }

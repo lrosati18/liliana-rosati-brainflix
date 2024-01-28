@@ -9,7 +9,11 @@ function Sidebar(props) {
     <section className="sidebar">
       <h3 className="sidebar__title">Next Videos</h3>
       {videos.map((video) => (
-        <Link to={`/videos/${video.id}`} key={video.id}>
+        <Link
+          className="sidebar__link"
+          to={`/videos/${video.id}`}
+          key={video.id}
+        >
           <SidebarElement video={video} />
         </Link>
       ))}
