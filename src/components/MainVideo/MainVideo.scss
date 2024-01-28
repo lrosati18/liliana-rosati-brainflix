@@ -4,6 +4,7 @@
 .main {
   @include tablet {
     background-color: $secondary-1;
+    text-align: center;
   }
 
   &__image {

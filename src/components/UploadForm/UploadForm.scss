@@ -1,0 +1,171 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.upload {
+  &__title {
+    font-weight: 600;
+    color: $primary-1;
+    text-align: left;
+    margin: 0;
+    padding: 1.5rem 0 0 1rem;
+    border-top: 1px solid $secondary-3;
+
+    @include tablet {
+      font-size: 2.0625rem;
+      padding-left: 3rem;
+      font-weight: 700;
+    }
+
+    @include desktop {
+      padding-left: 6rem;
+    }
+  }
+}
+
+.form {
+  flex-wrap: wrap;
+
+  &__tablet {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      margin: 0.5rem 1.5rem;
+      border-top: 1px solid $secondary-3;
+      border-bottom: 1px solid $secondary-3;
+    }
+
+    @include desktop {
+      margin: 0.5rem 5rem;
+      flex-direction: row;
+    }
+  }
+
+  &__desktop {
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__label {
+    @include form__label;
+    text-align: left;
+    margin: 1.5rem 1rem 0;
+
+    @include tablet {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__thumbnail {
+    width: 90%;
+    border-radius: 0.25rem;
+    margin: 0 auto;
+
+    @include tablet {
+      width: 50%;
+      margin: 0 0 0 1.5rem;
+    }
+
+    @include desktop {
+      width: 95%;
+      margin: 0 0 1rem 1.5rem;
+    }
+  }
+
+  &__input {
+    @include form__input;
+    margin-left: 1rem;
+    padding: 0.5rem;
+
+    @include tablet {
+      width: 95%;
+    }
+
+    @include desktop {
+      width: 60vw;
+    }
+  }
+
+  &__description {
+    @include form__input;
+    margin-left: 1rem;
+    padding: 0.5rem;
+
+    @include tablet {
+      width: 95%;
+      margin-bottom: 1.5rem;
+    }
+
+    @include desktop {
+      width: 60vw;
+    }
+  }
+}
+
+.buttons {
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: 1.5rem;
+    gap: 5rem;
+  }
+
+  &__publish {
+    @include button(90vw);
+    margin: 1.5rem 0 0 0;
+
+    @include tablet {
+      width: 20vw;
+      order: 2;
+      margin: 1rem 0;
+    }
+
+    @include desktop {
+      width: 10vw;
+      margin-right: 5rem;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+  }
+
+  &__cancel {
+    text-transform: uppercase;
+    color: $primary-2;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+
+    @include tablet {
+      order: 1;
+      padding: 0;
+      margin: 2rem 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $primary-4;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

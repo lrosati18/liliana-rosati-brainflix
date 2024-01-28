@@ -1,0 +1,15 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.player {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__desktop {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+}

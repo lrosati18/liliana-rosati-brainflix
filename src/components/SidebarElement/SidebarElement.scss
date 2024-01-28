@@ -2,6 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .video {
+  display: flex;
+
   &__button {
     background-color: $primary-4;
     border-style: none;

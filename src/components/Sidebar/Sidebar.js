@@ -1,17 +1,21 @@
+import { Link } from "react-router-dom";
+
 import "./Sidebar.scss";
-import SidebarElement from "./SidebarElement";
+import SidebarElement from "../SidebarElement/SidebarElement";
 
 function Sidebar(props) {
-  const { videos, selectVideo } = props;
+  const { videos } = props;
   return (
     <section className="sidebar">
       <h3 className="sidebar__title">Next Videos</h3>
       {videos.map((video) => (
-        <SidebarElement
+        <Link
+          className="sidebar__link"
+          to={`/videos/${video.id}`}
           key={video.id}
-          video={video}
-          selectVideo={selectVideo}
-        />
+        >
+          <SidebarElement video={video} />
+        </Link>
       ))}
     </section>
   );
