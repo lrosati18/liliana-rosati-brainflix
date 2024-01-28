@@ -3,11 +3,11 @@ import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/images/icons/publish.svg";
 import "./UploadForm.scss";
 
-function UploadForm() {
+function UploadForm({ submit }) {
   return (
     <section className="upload">
       <h1 className="upload__title">Upload Video</h1>
-      <form className="form" action="submit">
+      <form onSubmit={submit} className="form" action="submit">
         <div className="form__tablet">
           <div className="form__wrapper">
             <label className="form__label">Video Thumbnail</label>
@@ -27,7 +27,6 @@ function UploadForm() {
                 type="text"
                 placeholder="Add a title to your video"
                 className="form__input"
-                required
               ></input>
             </div>
 
@@ -40,7 +39,6 @@ function UploadForm() {
                 name="description"
                 placeholder="Add a description to your video"
                 className="form__description"
-                required
                 cols="28"
                 rows="5"
               ></textarea>
@@ -54,9 +52,7 @@ function UploadForm() {
               src={publishIcon}
               alt="publish icon"
             ></img>
-            <Link to="/" className="buttons__link">
-              Publish
-            </Link>
+            Publish
           </button>
           <p className="buttons__cancel">Cancel</p>
         </div>

@@ -1,6 +1,6 @@
 import "./SidebarElement.scss";
 function SidebarElement(props) {
-  const { video, selectVideo } = props;
+  const { video } = props;
 
   return (
     <div className="video">

@@ -12,7 +12,7 @@ function CommentForm({ selectedVideo }) {
         <img className="form__image" src={formImage} alt="Mohan Muruge"></img>
         <div className="form__container">
           <div className="form__wrapper">
-            <label for="comment" class="form__label">
+            <label htmlFor="comment" className="form__label">
               Join the Conversation
             </label>
             <textarea
