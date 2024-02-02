@@ -1,16 +1,24 @@
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import UploadForm from "../../components/UploadForm/UploadForm";
+
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function Upload() {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //upload functionality
-    //should i be using refs?
     const form = event.target;
-    const title = form.title.value;
-    const description = form.description.value;
+    const newTitle = form.title.value;
+    const newDescription = form.description.value;
+
+    const formData = {
+      title: newTitle,
+      description: newDescription,
+    };
+
+    axios.post(`${SERVER_URL}/upload`, formData);
 
     alert("Your upload was successful!");
     navigate("/");
