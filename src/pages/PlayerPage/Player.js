@@ -9,8 +9,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 
-const BASE_URL = "https://project-2-api.herokuapp.com";
-const API_KEY = "?api_key=99e4aed7-f8e8-4932-8bf2-2901fa146633";
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function PlayerPage() {
   const [videos, setVideos] = useState([]);
@@ -19,7 +18,7 @@ function PlayerPage() {
 
   const fetchVideoDetails = async (id) => {
     try {
-      const response = await axios.get(`${BASE_URL}/videos/${id}${API_KEY}`);
+      const response = await axios.get(`${SERVER_URL}/videos/${id}`);
       setSelectedVideo(response.data);
     } catch (error) {
       console.error(error);
@@ -32,7 +31,7 @@ function PlayerPage() {
 
   const fetchVideos = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/videos${API_KEY}`);
+      const response = await axios.get(`${SERVER_URL}/videos`);
       setVideos(response.data);
       if (response.data.length > 0) {
         fetchVideoDetails(response.data[0].id);
