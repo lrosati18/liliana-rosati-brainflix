@@ -18,7 +18,7 @@ function Upload() {
       description: newDescription,
     };
 
-    axios.post(`${SERVER_URL}/upload`, formData);
+    axios.post(`${SERVER_URL}/videos`, formData);
 
     alert("Your upload was successful!");
     navigate("/");
