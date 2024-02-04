@@ -11,13 +11,15 @@ function Header() {
   return (
     <section className="header">
       <Link to="/" className="header__link">
-        <img className="header__logo" alt="Brainflix logo" src={logo}></img>
+        <img className="header__logo" alt="Brainflix logo" src={logo} />
       </Link>
-      <img
-        className="header__logo header__logo--tablet"
-        alt="Brainflix logo"
-        src={logo}
-      ></img>
+      <Link to="/" className="header__link header__link--tablet">
+        <img
+          className="header__logo header__logo--tablet"
+          alt="Brainflix logo"
+          src={logo}
+        ></img>
+      </Link>
       <div className="header__container">
         <div className="search">
           <img
@@ -38,7 +40,7 @@ function Header() {
         <img className="header__avatar" alt="avatar" src={avatar}></img>
       </div>
       <Link to="/upload" type="submit" className="button">
-        <img className="button__icon" alt="upload icon" src={uploadIcon}></img>
+        <img className="button__icon " alt="upload icon" src={uploadIcon}></img>
         upload
       </Link>
     </section>

@@ -7,17 +7,15 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="app">
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<PlayerPage />} />
-          <Route path="/home" element={<Navigate to="/" />} />
-          <Route path="/upload" element={<UploadPage />} />
-          <Route path="/videos/:videoId" element={<PlayerPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<PlayerPage />} />
+        <Route path="/home" element={<Navigate to="/" />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/videos/:videoId" element={<PlayerPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
