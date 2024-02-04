@@ -113,12 +113,17 @@
 }
 
 .buttons {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
   @include tablet {
     margin: 0;
     display: flex;
-    margin-left: auto;
+    flex-direction: row;
+    justify-content: flex-end;
     margin-right: 1.5rem;
     gap: 5rem;
   }

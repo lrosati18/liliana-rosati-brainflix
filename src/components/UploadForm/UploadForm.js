@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/images/icons/publish.svg";
 import "./UploadForm.scss";
@@ -25,6 +24,7 @@ function UploadForm({ submit }) {
               </label>
               <input
                 type="text"
+                name="title"
                 placeholder="Add a title to your video"
                 className="form__input"
               ></input>
